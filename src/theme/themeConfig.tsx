@@ -104,9 +104,3 @@ const themeConfig: ThemeConfig = {
 };
 
 export default themeConfig;
-
-// Función para obtener la variable CSS, necesaria si usas parseFloat o si la quieres usar directamente
-// Fuera del return para que sea accesible por los tokens globales.
-function getCssVariableValue(variableName: string): string {
-    return getComputedStyle(document.documentElement).getPropertyValue(variableName).trim();
-}
