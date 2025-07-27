@@ -1,0 +1,136 @@
+export const designSystemCategories = [
+  {
+    name: 'Diseño',
+    path: 'design',
+    subcategories: [
+      {
+        name: 'Global Styles',
+        path: 'global-styles',
+        components: [
+          { name: 'Colors', path: 'colors' },
+          { name: 'Layout', path: 'layout' },
+          { name: 'Font', path: 'font' },
+          { name: 'Icons', path: 'icons' },
+          { name: 'Dark Mode', path: 'dark-mode' },
+          { name: 'Shadow', path: 'shadow' },
+        ],
+      },
+    ],
+  },
+  {
+    name: 'Development',
+    path: 'development',
+    subcategories: [
+      {
+        name: 'Advanced',
+        path: 'advanced',
+        components: [
+          { name: 'Customize Theme', path: 'customize-theme' },
+          { name: 'CSS Variables', path: 'css-variables' },
+        ],
+      },
+    ],
+  },
+  {
+    name: 'Componentes',
+    path: 'components',
+    subcategories: [
+      {
+        name: 'General',
+        path: 'general',
+        components: [
+          { name: 'Button', path: 'button' },
+          { name: 'FloatButton', path: 'float-button' },
+          { name: 'Icon', path: 'icon' },
+          { name: 'Typography', path: 'typography' },
+        ],
+      },
+      {
+        name: 'Layout',
+        path: 'layout',
+        components: [
+          { name: 'Divider', path: 'divider' },
+          { name: 'Flex', path: 'flex' },
+          { name: 'Grid', path: 'grid' },
+          { name: 'Layout', path: 'layout' },
+          { name: 'Space', path: 'space' },
+        ],
+      },
+      {
+        name: 'Navigation',
+        path: 'navigation',
+        components: [
+          { name: 'Anchor', path: 'anchor' },
+          { name: 'Breadcrumb', path: 'breadcrumb' },
+          { name: 'Dropdown', path: 'dropdown' },
+          { name: 'Menu', path: 'menu' },
+          { name: 'Pagination', path: 'pagination' },
+          { name: 'Steps', path: 'steps' },
+          { name: 'Tabs', path: 'tabs' },
+        ],
+      },
+      {
+        name: 'Data Entry',
+        path: 'data-entry',
+        components: [
+          { name: 'AutoComplete', path: 'auto-complete' },
+          { name: 'Cascader', path: 'cascader' },
+          { name: 'Checkbox', path: 'checkbox' },
+          { name: 'ColorPicker', path: 'color-picker' },
+          { name: 'DataPicker', path: 'date-picker' },
+          { name: 'Form', path: 'form' },
+          { name: 'Input', path: 'input' },
+          { name: 'InputNumber', path: 'input-number' },
+          { name: 'Radio', path: 'radio' },
+          { name: 'Rate', path: 'rate' },
+          { name: 'Select', path: 'select' },
+          { name: 'Switch', path: 'switch' },
+          { name: 'TimePicker', path: 'time-picker' },
+          { name: 'Upload', path: 'upload' },
+        ],
+      },
+      {
+        name: 'Data Display',
+        path: 'data-display',
+        components: [
+          { name: 'Avatar', path: 'avatar' },
+          { name: 'Badge', path: 'badge' },
+          { name: 'Calendar', path: 'calendar' },
+          { name: 'Card', path: 'card' },
+          { name: 'Collapse', path: 'collapse' },
+          { name: 'Empty', path: 'empty' },
+          { name: 'Segmented', path: 'segmented' },
+          { name: 'Statistic', path: 'statistic' },
+          { name: 'Table', path: 'table' },
+          { name: 'Tag', path: 'tag' },
+          { name: 'Timeline', path: 'timeline' },
+          { name: 'Tooltip', path: 'tooltip' },
+          { name: 'Tour', path: 'tour' },
+        ],
+      },
+      {
+        name: 'Feedback',
+        path: 'feedback',
+        components: [
+          { name: 'Alert', path: 'alert' },
+          { name: 'Drawer', path: 'drawer' },
+          { name: 'Message', path: 'message' },
+          { name: 'Modal', path: 'modal' },
+          { name: 'Notification', path: 'notification' },
+          { name: 'Popconfirm', path: 'popconfirm' },
+          { name: 'Progress', path: 'progress' },
+          { name: 'Result', path: 'result' },
+          { name: 'Skeleton', path: 'skeleton' },
+        ],
+      },
+      {
+        name: 'Other',
+        path: 'other',
+        components: [
+          { name: 'App', path: 'app' },
+          { name: 'ConfigProvider', path: 'config-provider' },
+        ],
+      },
+    ],
+  },
+]; 

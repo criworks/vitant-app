@@ -1,0 +1,16 @@
+{
+    "rules": [
+      "Siempre responder en español.",
+      "Priorizar las funcionalidades de frontend (mock-up, data dummy, navegación sin autenticación).",
+      "Usar Vite, React, Ant Design y React Router DOM como las principales librerías.",
+      "Mantener un código limpio, modular y fácil de entender. Usar TypeScript siempre que sea posible.",
+      "Si necesito más información o hay múltiples opciones, te lo preguntaré antes de proceder."
+    ],
+    "project": {
+      "indexing": {
+        "include": [
+          "**/*"
+        ]
+      }
+    }
+  }

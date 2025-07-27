@@ -1,0 +1,64 @@
+/* Variables CSS para tu tema personalizado */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  /* Colores principales */
+  --primary: #F9523B; /* Anaranjado principal */
+  --secondary: #646cff; /* Un color secundario de ejemplo */
+  --success: #52c41a;
+  --warning: #faad14;
+  --error: #f5222d;
+  --info: #1890ff;
+
+  /* Colores de texto */
+  --text-color: #64748B;
+  --text-color-secondary: #64748B;
+  --heading-color: #020817;
+  --disabled-color: rgba(0, 0, 0, 0.25);
+
+  /* Colores de fondo */
+  --background-color-base: #ffffff;
+  --background-color-body: transparent;
+  --background-color-header: transparent;
+  --background-color-sider: #FAFAFA; /* Para el Sider */
+  --background-color-container: transparent; /* Para el Card, Layout Content */
+  --background-color-red: red; /* Para test */
+
+  /* Colores de borde */
+  --border-color-base: #E2E8F0;
+  --border-color-split: #f0f0f0;
+
+  /* Bordes y espaciado */
+  --border-radius-base: 4px; /* Radio de borde general */
+  --border-radius-lg: 8px; /* Radio de borde grande */
+  --border-radius-sm: 2px; /* Radio de borde pequeño */
+
+  /* Tipografía */
+  --font-family-base: 'Roboto', sans-serif;
+
+  /* Espaciado (basado en Ant Design 4, en v5 usa un sistema diferente pero podemos mapear) */
+  /* --padding-xs: 8px;
+  --padding-sm: 12px;
+  --padding-md: 16px;
+  --padding-lg: 24px;
+  --padding-xl: 32px; */
+  --padding-md: 16px;
+
+  /* Sombras */
+  --box-shadow-base: 0 6px 16px 0 rgba(0, 0, 0, 0.08);
+  --box-shadow-hover: 0 8px 16px -8px rgba(0, 0, 0, 0.12);
+  --box-shadow-active: 0 4px 8px -4px rgba(0, 0, 0, 0.12);
+
+  /* Transiciones */
+  --ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --ease-in: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  --ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  /* Animaciones */
+  --animation-duration-slow: 0.3s;
+  --animation-duration-base: 0.2s;
+  --animation-duration-fast: 0.1s;
+}
+
+/* Resto de tu CSS existente */
+/* ... */
