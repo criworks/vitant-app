@@ -34,7 +34,9 @@ const TestPage: React.FC = () => {
       { id: '3', codigo: 'COD003', nombre: 'BALONES DE FÚTBOL EQUIVALENTES A TRAIN', cantidad: 2, unidad: 'kg', selected: false, isAdjudicated: true, precioOfertado: '2500', especificacionProveedor: 'Especificación adjudicada', comentarios: 'Ítem adjudicado', popoverVisible: false, searchDropdownVisible: false },
     ]
   );
-  const [allItemsDisabled, setAllItemsDisabled] = useState<boolean>(false);
+  const [allItemsDisabled] = useState<boolean>(false);
+  const [searchDropdownVisible, setSearchDropdownVisible] = useState<boolean>(false);
+  const [searchDropdownItemId, setSearchDropdownItemId] = useState<string>('');
   // Eliminar el estado global searchDropdownVisible
 
   const handleTextAreaChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -209,16 +211,19 @@ const TestPage: React.FC = () => {
                 <Dropdown
                   overlay={<ProductSearchDropdown onSelectProduct={(product) => handleProductSelect(product, item.id)} />}
                   trigger={['click']}
-                  open={item.searchDropdownVisible}
+                  open={searchDropdownVisible && searchDropdownItemId === item.id}
                   onOpenChange={(visible) => handleProductSearchDropdownVisibility(item.id, visible)}
-                  getPopupContainer={() => containerRef.current || document.body} // Asegura el posicionamiento
+                  getPopupContainer={() => containerRef.current || document.body}
                 >
                   <Button
                     size="large"
                     type="default"
                     disabled={!item.selected || item.isAdjudicated}
                     icon={<TagsOutlined style={{ fontSize: '16px' }} />}
-                    onClick={() => handleProductSearchDropdownVisibility(item.id, true)} // Asegurarse de abrir el correcto
+                    onClick={() => {
+                      setSearchDropdownItemId(item.id);
+                      setSearchDropdownVisible(true);
+                    }} // Asegurarse de abrir el correcto
                   />
                 </Dropdown>
 

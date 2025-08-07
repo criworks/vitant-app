@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import { Input, List, Typography, Divider, Space, Select, Button, Flex } from 'antd';
-import { SearchOutlined } from '@ant-design/icons';
 import type { Product } from '../data/mockProducts';
 import { mockProducts } from '../data/mockProducts';
 
 const { Text } = Typography;
-const { Search } = Input;
 
 interface ProductSearchDropdownProps {
   onSelectProduct: (product: Product) => void;
@@ -54,11 +52,9 @@ const ProductSearchDropdown: React.FC<ProductSearchDropdownProps> = ({ onSelectP
     <div style={{ padding: '8px', width: '400px' }}>
       <Space direction="vertical" style={{ width: '100%' }}>
         <Flex gap="small">
-          <Search
+          <Input
             placeholder="Buscar productos por nombre, código o especificación..."
-            onSearch={handleSearch}
             onChange={(e) => handleSearch(e.target.value)}
-            enterButton
             style={{ flex: 1 }}
           />
           <Select
