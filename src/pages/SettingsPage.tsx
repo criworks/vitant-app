@@ -2,19 +2,20 @@ import React from 'react';
 import { Empty } from 'antd';
 import PageLayout from '../components/PageLayout';
 
-const HomePage: React.FC = () => {
+const SettingsPage: React.FC = () => {
   const breadcrumbItems = [
     { path: '/', name: 'Inicio' },
+    { name: 'Configuración' },
   ];
 
   return (
     <PageLayout
       breadcrumbItems={breadcrumbItems}
-      pageTitle="Inicio"
+      pageTitle="Configuración"
     >
       <Empty description="En desarrollo" />
     </PageLayout>
   );
 };
 
-export default HomePage; 
+export default SettingsPage; 

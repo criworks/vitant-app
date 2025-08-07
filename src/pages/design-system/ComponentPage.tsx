@@ -1,9 +1,10 @@
 import React from 'react';
-import { Typography, Breadcrumb } from 'antd';
-import { useParams, Link } from 'react-router-dom';
+import { Typography, Empty } from 'antd';
+import { useParams } from 'react-router-dom';
 import { designSystemCategories } from '../../data/designSystemData';
+import PageLayout from '../../components/PageLayout';
 
-const { Title, Text } = Typography;
+const { Title } = Typography;
 
 const ComponentPage: React.FC = () => {
   const { category, subcategory, component } = useParams<{ category: string; subcategory: string; component: string }>();
@@ -16,17 +17,19 @@ const ComponentPage: React.FC = () => {
     return <Title level={2}>Componente no encontrado</Title>;
   }
 
+  const breadcrumbItems = [
+    { path: '/', name: 'Inicio' },
+    { path: '/design-system', name: 'Design System' },
+    { name: currentComponent.name },
+  ];
+
   return (
-    <div>
-      <Breadcrumb style={{ margin: '16px 0' }}>
-        <Breadcrumb.Item><Link to="/">Inicio</Link></Breadcrumb.Item>
-        <Breadcrumb.Item><Link to="/design-system">Design System</Link></Breadcrumb.Item>
-        <Breadcrumb.Item>{currentComponent.name}</Breadcrumb.Item>
-      </Breadcrumb>
-      <Title level={2}>{currentComponent.name}</Title>
-      <Text>Esta es la página del componente {currentComponent.name}. Aquí se mostrarán ejemplos de uso, propiedades y directrices.</Text>
-      {/* Aquí se pueden añadir ejemplos específicos del componente */}
-    </div>
+    <PageLayout
+      breadcrumbItems={breadcrumbItems}
+      pageTitle={currentComponent.name}
+    >
+      <Empty description="En desarrollo" />
+    </PageLayout>
   );
 };
 
